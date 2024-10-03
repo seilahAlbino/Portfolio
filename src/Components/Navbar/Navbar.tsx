@@ -54,32 +54,32 @@ function Navbar() {
     };
 
     const mobileMenu = () => (
-        <div className="fixed top-0 left-0 w-full p-4 font-bold z-50">
+        <div className={`fixed h-full top-0 left-0 w-full p-4 font-bold z-50 ${menuOpen ? 'backdrop-blur-sm' : ''}`}>
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-md">Joaquim Pereira<span className="text-primary">.</span></div>
                 <div className="flex items-center space-x-2">
-                    <button
-                        className="px-3 py-2 text-primary"
-                        onClick={toggleMenu}
-                    >
-                        {menuOpen ? <i className="bi bi-x-lg"></i> : <i className="bi bi-list"></i>}
-                    </button>
                     <button
                         className="px-3 py-2 relative flex items-center"
                         onClick={toggleDarkMode}
                     >
                         <i
-                            className={`bi bi-moon-fill absolute transition-transform duration-300 ease-in-out ${darkMode ? 'translate-y-0' : '-translate-y-12'}`}
+                            className={`text-sm bi bi-moon-fill absolute transition-transform duration-300 ease-in-out ${darkMode ? 'translate-y-0' : '-translate-y-12'}`}
                         />
                         <i
-                            className={`bi bi-brightness-high-fill absolute transition-transform duration-300 ease-in-out ${darkMode ? '-translate-y-12' : 'translate-y-0'}`}
+                            className={`text-sm bi bi-brightness-high-fill absolute transition-transform duration-300 ease-in-out ${darkMode ? '-translate-y-12' : 'translate-y-0'}`}
                         />
+                    </button>
+                    <button
+                        className="px-3 py-2 text-primary"
+                        onClick={toggleMenu}
+                    >
+                        {menuOpen ? <i className="text-lg bi bi-x-lg"></i> : <i className="text-lg bi bi-list"></i>}
                     </button>
                 </div>
             </div>
             <div className={`flex flex-col items-center justify-center lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
                 {options.map(option =>
-                    <a href={option.to} key={option.to} className={`w-min block px-4 py-2 text-center ${getLinkClass(option.to)}`}>{option.title}</a>
+                    <a href={option.to} key={option.to} className={`w-min block px-4 py-2 text-center ${getLinkClass(option.to)}`} onClick={() => setMenuOpen(false)}>{option.title}</a>
                 )}
             </div>
         </div>
