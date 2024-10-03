@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 
 function ProjectCard({ name, image, projectType, description, github, website }: ProjectCardProps) {
-    return <div className="max-w-xl rounded-lg overflow-hidden mb-5">
+    return <div className="max-w-xl rounded-lg overflow-hidden mb-5 project">
         <span className="uppercase text-gray-400">{projectType}</span>
         <div className="relative">
             <a href={website ?? "#"} target={website ? "_blank" : ""} className={website ? "" : "pointer-events-none"} rel="noopener noreferrer">

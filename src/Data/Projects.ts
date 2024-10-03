@@ -17,6 +17,38 @@ const Projects: Project[] = [
         github: "https://github.com/seilahAlbino/Three.JS-Shop-Example",
         website: "https://threeshop.netlify.app/",
     },
+    {
+        name: "Three Shop",
+        image: "threeshop.png",
+        projectType: ProjectType.Academic,
+        description: "Este projeto é uma aplicação que permite explorar e interagir com um modelo 3D (uma cama). Utilizando <b>Three.js</b>, a aplicação permite ao utilizador mudar o material e a cor de diferentes partes da mesma de forma simples e intuitiva.",
+        github: "https://github.com/seilahAlbino/Three.JS-Shop-Example",
+        website: "https://threeshop.netlify.app/",
+    },
+    {
+        name: "Three Shop",
+        image: "threeshop.png",
+        projectType: ProjectType.Academic,
+        description: "Este projeto é uma aplicação que permite explorar e interagir com um modelo 3D (uma cama). Utilizando <b>Three.js</b>, a aplicação permite ao utilizador mudar o material e a cor de diferentes partes da mesma de forma simples e intuitiva.",
+        github: "https://github.com/seilahAlbino/Three.JS-Shop-Example",
+        website: "https://threeshop.netlify.app/",
+    },
+    {
+        name: "Three Shop",
+        image: "threeshop.png",
+        projectType: ProjectType.Academic,
+        description: "Este projeto é uma aplicação que permite explorar e interagir com um modelo 3D (uma cama). Utilizando <b>Three.js</b>, a aplicação permite ao utilizador mudar o material e a cor de diferentes partes da mesma de forma simples e intuitiva.",
+        github: "https://github.com/seilahAlbino/Three.JS-Shop-Example",
+        website: "https://threeshop.netlify.app/",
+    },
+    {
+        name: "Three Shop",
+        image: "threeshop.png",
+        projectType: ProjectType.Academic,
+        description: "Este projeto é uma aplicação que permite explorar e interagir com um modelo 3D (uma cama). Utilizando <b>Three.js</b>, a aplicação permite ao utilizador mudar o material e a cor de diferentes partes da mesma de forma simples e intuitiva.",
+        github: "https://github.com/seilahAlbino/Three.JS-Shop-Example",
+        website: "https://threeshop.netlify.app/",
+    },
 ]
 
 export default Projects;

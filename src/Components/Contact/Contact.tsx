@@ -78,8 +78,8 @@ function Contact() {
 
     return (
         <section className="p-8">
-            <h2 className="text-4xl font-bold mb-12 text-center text-primary">Contato</h2>
-            <div className="max-w-lg mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-center text-primary contactTitle">Contato</h2>
+            <div className="max-w-lg mx-auto contactForm">
                 <form ref={formRef} className="space-y-6" onSubmit={sendEmail}>
                     <div>
                         <ContactInput placeholder="Nome" name="from_name" id="from_name" className={errors.name ? 'border-red-500' : ''}/>
