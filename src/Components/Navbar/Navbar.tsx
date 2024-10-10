@@ -70,7 +70,7 @@ function Navbar() {
                         />
                     </button>
                     <button
-                        className="px-3 py-2 text-primary"
+                        className="pl-3 py-2 text-primary"
                         onClick={toggleMenu}
                     >
                         {menuOpen ? <i className="text-lg bi bi-x-lg"></i> : <i className="text-lg bi bi-list"></i>}

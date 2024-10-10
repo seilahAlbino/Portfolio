@@ -17,19 +17,14 @@ module.exports = {
                 dark: "#080807",
             },
             keyframes: {
-                fadeIn: {
-                    '0%': { opacity: 0, transform: 'translateY(20px)' },
-                    '100%': { opacity: 1, transform: 'translateY(0)' },
-                },
                 shake: {
                     '0%': { top: '0px' },
-                    '50%': { transform: 'rotate(1deg)' },
-                    '80%': { transform: 'rotate(-1deg)' },
+                    '50%': { transform: 'rotate(2deg)' },
+                    '80%': { transform: 'rotate(-2deg)' },
                     '100%': { top: '10px' }
                 }
             },
             animation: {
-                fadeIn: 'fadeIn 1s ease-out forwards',
                 shake: 'shake 60ms infinite alternate',
             },
         },
