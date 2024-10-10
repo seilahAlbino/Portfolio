@@ -54,7 +54,7 @@ function Navbar() {
     };
 
     const mobileMenu = () => (
-        <div className={`fixed h-full top-0 left-0 w-full p-4 font-bold z-50 ${menuOpen ? 'backdrop-blur-sm' : ''}`}>
+        <div className={`fixed top-0 left-0 p-4 font-bold z-50 w-full ${menuOpen ? 'backdrop-blur-sm h-full' : ''}`}>
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-md">Joaquim Pereira<span className="text-primary">.</span></div>
                 <div className="flex items-center space-x-2">
