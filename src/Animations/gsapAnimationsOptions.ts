@@ -29,8 +29,8 @@ export const projectAnimationSettings: Record<string, AnimationSettings> = {
         customOptions: { end: "bottom 501px" },
     },
     projects: {
-        initial: { y: 200, opacity: 0, filter: "blur(1.5px)" },
-        final: { y: 0, opacity: 1, filter: "blur(0px)" },
+        initial: { y: 150, opacity: 0 },
+        final: { y: 0, opacity: 1 },
         trigger: "#projects",
     },
 };
@@ -39,8 +39,8 @@ export const contactAnimationSettings: Record<string, AnimationSettings> = {
     title: {
         initial: { y: -100, opacity: 0 },
         final: { y: 0, opacity: 1 },
-        trigger: "#contact",
-        customOptions: { end: "bottom bottom" },
+        trigger: ".contactTitle",
+        customOptions: { end: "bottom 501px" },
     },
     contact: {
         initial: { y: 200, opacity: 0, filter: "blur(1.5px)" },

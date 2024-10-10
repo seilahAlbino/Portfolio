@@ -41,12 +41,14 @@ function Home() {
         });
 
         const projects = el.current?.querySelectorAll<HTMLElement>(".project");
+        
         if (projects) {
             setupTimelineAnimation(
                 projects,
                 projectAnimationSettings.projects.initial,
                 projectAnimationSettings.projects.final,
-                projectAnimationSettings.projects.trigger
+                projectAnimationSettings.projects.trigger,
+                projectAnimationSettings.projects.customOptions
             );
         }
 

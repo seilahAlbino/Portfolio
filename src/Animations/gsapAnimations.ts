@@ -33,14 +33,22 @@ export const setupTimelineAnimation = (
     projects: NodeListOf<HTMLElement>,
     initialProps: gsap.TweenVars,
     finalProps: gsap.TweenVars,
-    trigger: gsap.DOMTarget
+    trigger: gsap.DOMTarget,
+    options: AnimationOptions = {}
 ) => {
+    const {
+        start = "top 500px",
+        end = "bottom 600px",
+        markers = false,
+    } = options;
+    
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: trigger,
             scrub: true,
-            start: "top 600px",
-            end: "bottom 850px",
+            start: start,
+            end: end,
+            markers: markers
         },
     });
 
