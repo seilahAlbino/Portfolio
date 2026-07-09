@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>joaquim.dev — web developer</title>
+        <meta
+            name="description"
+            content="Portfolio de web developer em formato de terminal."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- ============ BOOT / TERMINAL INTRO ============ -->
+        <div id="boot" class="boot">
+            <canvas
+                id="particleCanvas"
+                class="boot__canvas"
+                aria-hidden="true"
+            ></canvas>
+            <div class="boot__frame" id="bootFrame">
+                <div class="boot__titlebar">
+                    <span class="boot__dot boot__dot--a"></span>
+                    <span class="boot__dot boot__dot--b"></span>
+                    <span class="boot__dot boot__dot--c"></span>
+                    <span class="boot__title">guest@portfolio: ~</span>
+                </div>
+                <div
+                    class="boot__body"
+                    id="bootBody"
+                    role="log"
+                    aria-live="polite"
+                ></div>
+            </div>
+            <button id="skipIntro" class="boot__skip" type="button">
+                saltar intro →
+            </button>
+        </div>
+
+        <!-- ============ SITE ============ -->
+        <div id="site" class="site" aria-hidden="true">
+            <div class="scanlines" aria-hidden="true"></div>
+
+            <header class="nav" id="nav">
+                <div class="nav__inner">
+                    <a href="#hero" class="nav__logo" data-goto="hero"
+                        >&gt;_ <span>joaquim.dev</span></a
+                    >
+                    <nav class="nav__tabs" id="navTabs">
+                        <button class="nav__tab" data-goto="about">
+                            sobre.txt
+                        </button>
+                        <button class="nav__tab" data-goto="skills">
+                            skills/
+                        </button>
+                        <button class="nav__tab" data-goto="projects">
+                            projetos/
+                        </button>
+                        <button class="nav__tab" data-goto="contact">
+                            contacto.sh
+                        </button>
+                    </nav>
+                    <button
+                        class="nav__menu-btn"
+                        id="menuBtn"
+                        aria-label="abrir menu"
+                        aria-expanded="false"
+                    >
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </header>
+
+            <main>
+                <!-- HERO -->
+                <section class="hero" id="hero">
+                    <p class="hero__prompt">guest@portfolio:~$ whoami</p>
+                    <h1 class="hero__name" id="heroName">Joaquim Pereira</h1>
+                    <p class="hero__role">
+                        &gt; web developer
+                        <span class="hero__role-accent">full-stack</span>
+                    </p>
+                    <p class="hero__bio">
+                        Desenvolvo interfaces focadas em performance, experiência e detalhe. Gosto de animações suaves, código simples e projetos que dão vontade de explorar.
+                    </p>
+                    <div class="hero__cta">
+                        <button class="btn btn--solid" data-goto="projects">
+                            ver projetos
+                        </button>
+                        <button class="btn btn--ghost" data-goto="contact">
+                            contactar
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ABOUT -->
+                <section class="section about" id="about">
+                    <p class="section__eyebrow">
+                        guest@portfolio:~$ cat sobre.txt
+                    </p>
+                    <h2 class="section__title">sobre</h2>
+                    <div class="about__grid">
+                        <div class="about__text">
+                            <p>
+                                Sou um desenvolvedor web apaixonado por criar experiências digitais que vão além 
+                                de simplesmente funcionar. Gosto de juntar design, interação e código para 
+                                transformar ideias em projetos.
+                            </p>
+                            <p>
+                                Trabalho tanto no frontend como no backend, explorando tudo desde 
+                                interfaces animadas até à lógica que faz uma aplicação funcionar por trás.
+                            </p>
+                            <p>
+                                Tenho uma atenção especial pelos detalhes que muitas vezes passam despercebidos:
+                                uma transição, uma interação diferente ou uma pequena melhoria
+                                que torna a experiência mais agradável. No fundo, gosto de criar coisas
+                                que dão vontade de explorar.
+                            </p>
+                        </div>
+                        <div class="about__meta">
+                            <div class="meta-row">
+                                <span class="meta-row__key">localização</span
+                                ><span class="meta-row__val">Portugal</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-row__key">foco</span
+                                ><span class="meta-row__val"
+                                    >front-end &amp; back-end</span
+                                >
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-row__key"
+                                    >disponibilidade</span
+                                ><span class="meta-row__val meta-row__val--ok"
+                                    >aberto a projetos</span
+                                >
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-row__key">stack</span
+                                ><span class="meta-row__val"
+                                    >JS · Node · React</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SKILLS -->
+                <section class="section skills" id="skills">
+                    <p class="section__eyebrow">
+                        guest@portfolio:~$ npm list --depth=0
+                    </p>
+                    <h2 class="section__title">competências</h2>
+                    <div class="skills__grid" id="skillsGrid"></div>
+                </section>
+
+                <!-- PROJECTS -->
+                <section class="section projects" id="projects">
+                    <p class="section__eyebrow">
+                        guest@portfolio:~$ ls -la projetos/
+                    </p>
+                    <h2 class="section__title">projetos</h2>
+                    <div class="projects__list" id="projectsList"></div>
+                </section>
+
+                <!-- CONTACT -->
+                <section class="section contact" id="contact">
+                    <p class="section__eyebrow">
+                        guest@portfolio:~$ mail -s "vamos trabalhar juntos"
+                    </p>
+                    <h2 class="section__title">contacto</h2>
+                    <div class="contact__grid">
+                        <p class="contact__lead">
+                            Tens um projeto, uma ideia ou só queres dizer olá? A
+                            minha caixa de entrada está sempre com a porta 25
+                            aberta.
+                        </p>
+                        <div class="contact__links" id="contactLinks"></div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer" id="footer">
+                <div class="terminal-bar">
+                    <span class="terminal-bar__prompt">guest@portfolio:~$</span>
+                    <input
+                        id="cmdInput"
+                        class="terminal-bar__input"
+                        type="text"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        placeholder="escreve 'help' e prime enter"
+                        aria-label="terminal de comandos"
+                    />
+                    <span
+                        class="terminal-bar__cursor"
+                        aria-hidden="true"
+                    ></span>
+                </div>
+                <div class="terminal-bar__output" id="cmdOutput"></div>
+                <p class="footer__credits">
+                    © 2026 Joaquim Pereira - construído com HTML, CSS, JS &amp;
+                    GSAP.
+                </p>
+            </footer>
+        </div>
+
+        <script type="module" src="./src/scripts/main.js"></script>        
+    </body>
+</html>
